@@ -56,7 +56,7 @@ print(f"Subtração (-): {a - b}")        # Resultado: 7
 print(f"Multiplicação (*): {a * b}")    # Resultado: 30
 print(f"Divisão (/): {a / b}")          # Resultado: 3.333... (Devolve sempre um float)
 print(f"Divisão Inteira (//): {a // b}") # Resultado: 3 (Devolve o quociente, corta os decimais)
-print(f"Módulo/Resto (%): {a % b}")           # Resultado: 1 (Devolve o resto da divisão)
+print(f"Módulo/Resto (%): {a % b}")      # Resultado: 1 (Devolve o resto da divisão)
 print(f"Exponenciação (**): {a ** b}")  # Resultado: 1000 (10 elevado a 3)
 
 
@@ -66,7 +66,7 @@ print(f"Exponenciação (**): {a ** b}")  # Resultado: 1000 (10 elevado a 3)
 # Servem para comparar valores. Devolvem SEMPRE True ou False.
 print("\n--- Operadores Relacionais ---")
 print(f"Igual a (==): 5 == 5 -> {5 == 5}")       
-print(f"Diferente de (!=): 5 != 3 -> {5 != 3}")  
+print(f"Diferente de (!=): 5 != 3 -> {5 != 3}")
 print(f"Maior que (>): 7 > 5 -> {7 > 5}")       
 print(f"Menor que (<): 3 < 6 -> {3 < 6}")       
 print(f"Maior ou igual (>=): 8 >= 8 -> {8 >= 8}") 
@@ -79,10 +79,10 @@ print(f"Menor ou igual (<=): 4 <= 6 -> {4 <= 6}")
 # Combinam múltiplas condições.
 print("\n--- Operadores Lógicos ---")
 # AND (E): Devolve True SÓ SE ambas as condições forem verdadeiras
-print(f"AND: (5 > 3) and (8 > 6) -> {(5 > 3) and (8 > 6)}")
+print(f"AND: (5 > 3) and (8 > 6) -> {(5 > 3) and (8 < 6)}") # False
 
 # OR (Ou): Devolve True SE PELO MENOS UMA das condições for verdadeira
 print(f"OR: (5 > 3) or (8 < 6) -> {(5 > 3) or (8 < 6)}")
 
 # NOT (Negação): Inverte o resultado (se é True, vira False)
-print(f"NOT: not(5 > 3) -> {not(5 > 3)}")
+print(f"NOT: not(5 > 3) -> {not(5 < 3)}")
