@@ -1,4 +1,4 @@
-# --- 1 e 2---
+# --- 1 e 2 ---
 print("\n--- 1 ---")
 idade = int(input("Introduza a sua idade: "))
 
