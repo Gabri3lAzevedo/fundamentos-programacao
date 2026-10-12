@@ -120,4 +120,112 @@ else:
 
 
 # --- 12 ---
-print("\n--- 12 ---")
+print("\n--- 12 ---")  # Exercício 6 com For
+print("Ex. 6 com For:")
+for i in range(1, 11):
+    print(i)
+print("Fim")
+
+# Exercício 7 com For (Ao contrário)
+print("\nEx. 7 com For:")
+for i in range(10, -1, -1):
+    print(i)
+print("Fim")
+
+# Exercício 8 com For (Pares)
+print("\nEx. 8 com For:")
+for i in range(2, 11, 2):
+    print(i)
+print("Fim")
+
+# Exercício 9 com For (Pares sem o 4)
+print("\nEx. 9 com For:")
+for i in range(2, 11, 2):
+    if i == 4:
+        continue
+    print(i)
+print("Fim")
+
+# Exercício 10 com For (Pares até ao 6)
+print("\nEx. 10 com For:")
+for i in range(2, 11, 2):
+    print(i)
+    if i == 6:
+        break
+print("Fim")
+
+# Exercício 11 com For (Else + For)
+print("\nEx. 11 com For:")
+for i in range(2, 11, 2):
+    print(i)
+else:
+    print("Concluiu todas as iterações")
+
+
+# --- 13 ---
+print("\n--- 13 ---")
+# a. Com entrada 10 o esperado era 20. O obtido seria 20.
+# b. Com entrada "abc" o esperado era um erro. O obtido é um crash (ValueError).
+try:
+    numero = int(input("Introduza um número: "))
+    print("O dobro é:", numero * 2)
+except ValueError:
+    print("Erro: Deve introduzir um valor numérico.")
+
+
+# --- 14 ---
+print("\n--- 14 ---")
+# a. Com 10 esperado 1. Obtido 1.0.
+# b. Com "abc" crash (ValueError).
+# c. Com 0 crash (ZeroDivisionError).
+try:
+    numero = int(input("Introduza um número para dividir 10: "))
+    resultado = 10 / numero
+    print(f"Resultado: {resultado}")
+except ValueError:
+    print("Erro: Deve introduzir um valor numérico.")
+except ZeroDivisionError:
+    print("Erro: Não é possível dividir por zero.")
+
+
+# --- 15 ---
+print("\n--- 15 ---")
+try:
+    numero = int(input("Introduza um número para dividir 10: "))
+    resultado = 10 / numero
+except ValueError:
+    print("Erro: Deve introduzir um valor numérico.")
+except ZeroDivisionError:
+    print("Erro: Não é possível dividir por zero.")
+else:
+    # Só apresenta o resultado se não ocorrerem exceções
+    print(f"Resultado: {resultado}")
+finally:
+    # Apresenta a mensagem sempre
+    print("Fim da execução")
+
+
+# --- 16 ---
+print("\n--- 16 ---")
+while True:
+    entrada1 = input("\nIntroduza o primeiro número (ou 'Sair'): ")
+    if entrada1.lower() == "sair":
+        break
+        
+    entrada2 = input("Introduza o segundo número (ou 'Sair'): ")
+    if entrada2.lower() == "sair":
+        break
+        
+    try:
+        num1 = float(entrada1)
+        num2 = float(entrada2)
+        resultado = num1 / num2
+    except ValueError:
+        print("Erro: Deve introduzir valores numéricos válidos. Tente novamente!")
+    except ZeroDivisionError:
+        print("Erro: Não é possível dividir por zero. Tente novamente!")
+    else:
+        print(f"Resultado: {resultado}")
+        break # Opcional: Sai do loop se a divisão for bem-sucedida, conforme lógica de validação
+    finally:
+        print("Fim da execução da iteração atual.")
